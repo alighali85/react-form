@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import BugReportIcon from '@material-ui/icons/BugReport';
 import useWeather from './useWeather';
 
 const useStyles = makeStyles((theme) => ({
@@ -35,7 +35,7 @@ export default function AppHeader({ weatherApi, title = 'app name' }) {
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MonetizationOnIcon fontSize="large" />
+            <BugReportIcon fontSize="large" />
           </IconButton>
           <Typography variant="h5" className={classes.title}>{title}</Typography>
           {weather ? (
@@ -49,7 +49,7 @@ export default function AppHeader({ weatherApi, title = 'app name' }) {
               {!!weather.icon && <img src={`http://openweathermap.org/img/wn/${weather.icon}.png`} alt="weather-icon" />}
               <span>
                 {' '}
-                {weather.tempreature}
+                {weather.temperature}
                 {' '}
                 °C
               </span>
