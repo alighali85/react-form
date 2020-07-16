@@ -28,7 +28,7 @@ const gameBugReportForm = [
     },
         {
         id: 3,
-        title: 'select a game',
+        title: 'Select game/s',
         name: 'game',
         required: true,
         type: 'checkbox',
@@ -63,7 +63,7 @@ export const personalMessage = [
         id: 1,
         title: 'contact with',
         name: 'receiver',
-        placeholder: 'Enter title',
+        placeholder: 'contact name',
         required: true,
         type: 'text',
         minLength: 3,

@@ -75,9 +75,15 @@ function App({forms = formsSource}) {
         <Dialog open={loading || done}>
           <DialogTitle id="simple-dialog-title">
             {done && <>
-            All forms's submitted!<br/>
+            All forms submitted!<br/>
             {' '}
-           <Button variant="contained" color="secondary" onClick={reset} >Restart</Button>
+           <Button
+            variant="contained"
+            color="secondary"
+            style={{marginTop: 24}}
+            onClick={reset} >
+             Restart
+             </Button>
             </>
             }
             { loading && <>
