@@ -8,7 +8,6 @@ const gameBugReportForm = [
         id: 1,
         title: 'Issue title',
         name: 'title', 
-        label: 'label',
         placeholder: 'Enter title',
         required: true,
         type: 'text',
@@ -21,7 +20,6 @@ const gameBugReportForm = [
         id: 2,
         title: 'Select platform',
         name: 'platform', 
-        label: 'label',
         required: true,
         type: 'radio',
         options: ['Web', 'Android', 'IOS'],
@@ -48,8 +46,7 @@ const gameBugReportForm = [
     {
         id: 4,
         title: 'Issue description',
-        name: 'issue text', 
-        label: 'description',
+        name: 'issue text',
         placeholder: 'Enter description',
         required: true,
         type: 'textarea',
@@ -59,4 +56,48 @@ const gameBugReportForm = [
         component: TextArea,
     },
 ]
+
+/// personal message form data
+export const personalMessage = [
+    {
+        id: 1,
+        title: 'contact with',
+        name: 'receiver',
+        placeholder: 'Enter title',
+        required: true,
+        type: 'text',
+        minLength: 3,
+        maxLength: 40,
+        errorText: '* Required, enter between 3 - 40 character',
+        component: TextInput,
+    },
+    {
+        id: 2,
+        title: 'Message text',
+        name: 'message text', 
+        placeholder: 'Enter your message',
+        required: true,
+        type: 'textarea',
+        minLength: 10,
+        maxLength: 400,
+        errorText: '* Required, enter between 10 - 400 character',
+        component: TextArea,
+    },
+]
+
+/// rating form data
+export const ratingForm = [
+    {
+        id: 1,
+        title: 'Select rating',
+        name: 'rating', 
+        required: true,
+        type: 'radio',
+        options: ['bad', 'not bad', 'good', 'excellent'],
+        errorText: '* Select one',
+        component: RadioGroup,
+    }
+]
+
+
 export default gameBugReportForm
