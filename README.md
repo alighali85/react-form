@@ -1,4 +1,4 @@
-## Bug report app/form as a coding challenge for [Wooga](https://www.wooga.com/)
+## Dynamic form creator for [Wooga](https://www.wooga.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
