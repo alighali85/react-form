@@ -22,7 +22,7 @@ const gameBugReportForm = [
         name: 'platform', 
         required: true,
         type: 'radio',
-        options: ['Web', 'Android', 'IOS'],
+        options: ['Web', 'Android', 'IOS', 'All'],
         errorText: '* Select one platform',
         component: RadioGroup,
     },

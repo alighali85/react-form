@@ -53,7 +53,8 @@ const useStyles = makeStyles({
         cursor: 'pointer',
         position: 'absolute',
         bottom: -28,
-
+        whiteSpace: 'nowrap',
+        fontSize: 12,
     },
 })
 

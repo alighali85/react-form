@@ -8,8 +8,9 @@ import mockRequest from '../../api/mockRequest.js'
 const useStyles = makeStyles({
     form: {
         maxWidth: '100%',
-        padding: 24,
+        padding: 8,
         marginTop: 24,
+        marginBottom: 128,
         border: '1px solid lightgray',
         borderRadius: 5
     },
@@ -25,6 +26,8 @@ const useStyles = makeStyles({
     submitButton: {
         backgroundColor: '#3f51b5',
         padding: '12px 24px',
+        margin: 24,
+        float: 'right',
         border: 'none',
         boxShadow: '0px 3px 8px #3f51b5',
         borderRadius: 20,
@@ -110,8 +113,9 @@ export default function FormGenerator({source, onSuccess, onErr, title, id, onSu
     
     return (
         <>
-            <Grid xs={false} sm={false} item/>
-            <Grid xs={12}  sm={12} item>
+        <Grid container> 
+            <Grid xs={false} sm={false} md={2} item/>
+            <Grid xs={12}  sm={12} md={8} item>
                 <form className={classes.form} ref={form} onSubmit={handleSubmit}>
                     <Typography variant="h5">{title}</Typography><br/>
                     {source.map(ele => <div className={classes.inputItem} key={ele.id}>
@@ -128,6 +132,7 @@ export default function FormGenerator({source, onSuccess, onErr, title, id, onSu
                     </button>
                 </form>
             </Grid>
+        </Grid>
         </>
     )
 }

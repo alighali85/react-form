@@ -10,11 +10,12 @@ const useStyles = makeStyles({
     cardsWrapper: {
         display: 'flex',
         position: 'relative',
+        flexWrap: 'wrap',
         '& label': {
             marginBottom: 48,
             flexGrow: 1,
             border: '1px solid #f3f3f3',
-            margin: 12,
+            margin: 8,
             minHeight: 64,
             borderRadius: 5,
             '& input': {
@@ -36,6 +37,7 @@ const useStyles = makeStyles({
         background: 'lightgray',
         opacity: '0.5',
         minHeight: 64,
+        minWidth: 120,
         width: '100%',
         borderRadius: 5,
         cursor: 'pointer',
