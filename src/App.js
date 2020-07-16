@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import FormGenerator from './containers/formGenerator'
 import AppHeader from './components/appHeader'
 import { LONDON_WEATHER, APP_TITLE } from './config/header'
-import {Container, Dialog, DialogTitle} from '@material-ui/core'
+import {Container, Dialog, DialogTitle, Button} from '@material-ui/core'
 import bugFormDataSource, { personalMessage, ratingForm } from './config/formsData.js'
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -51,6 +51,8 @@ function App({forms = formsSource}) {
   }
 
   const reset = () => {
+    setLoading(false)
+    setDone(false)
     setActiveForm(1)
   }
   
@@ -69,16 +71,23 @@ function App({forms = formsSource}) {
           />}
           </div>)}
       </Container>
-      {done && <div>All done</div>}
-      {loading && <div>
-        <Dialog open={loading}>
+      {(loading || done) && <div>
+        <Dialog open={loading || done}>
           <DialogTitle id="simple-dialog-title">
+            {done && <>
+            All forms's submitted!<br/>
+            {' '}
+           <Button variant="contained" color="secondary" onClick={reset} >Restart</Button>
+            </>
+            }
+            { loading && <>
             Loading ...
-          <CircularProgress />
+            <CircularProgress />
+            </>
+            }
           </DialogTitle>
         </Dialog>
-        </div>}
-        {done && <button onClick={reset}>Restart</button>}
+      </div>}
     </div>
   );
 }
