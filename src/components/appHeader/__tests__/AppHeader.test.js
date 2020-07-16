@@ -1,6 +1,7 @@
 import React from 'react';
-import { render, rerender } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import AppHeader from '../AppHeader';
+import '@testing-library/jest-dom/extend-expect';
 
 describe('Main App Header', () => {
   it('renders correctly', () => {
