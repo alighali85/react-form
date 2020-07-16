@@ -12,6 +12,12 @@ const useStyles = makeStyles({
             padding: 12,
             marginBottom: 48,
             borderRadius: 5,
+            fontFamily: [
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif'
+    ].join(','),
     }
     },
     
