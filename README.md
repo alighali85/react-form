@@ -4,19 +4,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Coding approach
 - I will code the core form functionality in pure JSX React and html.
-- for the outer app, I will use Bootstrap to give nice appearance in shorter time.
-- for CSS I am using CSS-in-JS (using Bootstrap theme as base) but can use it also without bootstrap theme.
+- for the outer app, I will use Material UI to give nice appearance in shorter time.
+- for CSS I am using CSS-in-JS (using Material UI theme as base) but can use it also without library theme.
 - I am using React-hooks and functional components.
 - For testing, I am using `@testing-library/react` with `jest` as test runner for `Functional/Component` tests.
-- faking backend response, using promises
+- faking backend response, using promises.
 
 ## design pattern
 - I am using components/containers pattern like MVC
 - adding and entry point to each folder `(in package.json)`, help us not to have all the file with `index.js` name.
-- encapsulated components, each component is independent of the other and can be reused or removed safely (that includes its test as well)
-
+- encapsulated components, each component is independent of other and can be reused or removed safely (that includes its test as well)
 - on a Business level I would use one of well maintained and ready-implemented frameworks like (Formik)
-
 
 ## Available Scripts
 
